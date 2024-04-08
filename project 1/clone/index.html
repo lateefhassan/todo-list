@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+
+    <!-- link icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- google font -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- link css -->
+    <link rel="stylesheet" href="appp.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <aside>
+          <div class="aside-container">
+            <div class="title">
+              <div class="txt">
+                <h1>Todos</h1>
+                <!-- <i class="bx bxs-user-circle"></i> -->
+                <i class="bx bx-notepad"></i>
+              </div>
+              <div class="search">
+                <input
+                  type="search"
+                  name="se"
+                  id="se"
+                  class="search_tash"
+                  placeholder="search..."
+                />
+              </div>
+            </div>
+
+            <div class="task">
+              <h3>TASK</h3>
+              <h2 class="category-side today">
+                <i class="bx bx-chevrons-right"></i>
+                <p>Today</p>
+                <span class="count today-count">0</span>
+              </h2>
+            </div>
+
+            <div class="lists">
+              <h3>Category</h3>
+              <label class="working idea" data-category="work" data-id="all">
+                <div class="h2 working">
+                  <div class="all"></div>
+                  <p>All Todos</p>
+                </div>
+              </label>
+
+              <label
+                class="person idea"
+                data-category="personal"
+                data-id="personal"
+              >
+                <div class="h2 parson">
+                  <div class="personals"></div>
+                  <p>Personal</p>
+                </div>
+              </label>
+
+              <label class="working idea" data-category="work" data-id="work">
+                <div class="h2 working">
+                  <div class="works"></div>
+                  <p>Work</p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </aside>
+
+        <div class="popup">Todo Item Deleted Successfully</div>
+
+        <div class="parent">
+          <div class="main1">
+            <div class="head">
+              <div>
+                <input type="text" placeholder="Your Name" class="searchbtn" />
+                <h2>Get Things Done</h2>
+              </div>
+              <div class="tommy">
+                <h1>Today</h1>
+                <span class="total-count">0</span>
+              </div>
+            </div>
+
+            <div class="main-container">
+              <button class="addbtns">
+                <i class="bx bx-plus"></i> Add New Task
+              </button>
+
+              <form class="form display">
+                <i class="bx bx-x-circle"></i>
+                <div class="form-page">
+                  <input
+                    type="text"
+                    placeholder="Your Task Here"
+                    name="content"
+                    id="content"
+                    class="item"
+                  />
+
+                  <button type="submit" class="button">Add</button>
+                </div>
+
+                <div class="center">
+                  <h3>Choose a category</h3>
+                  <div class="category1">
+                    <label>
+                      <input
+                        type="radio"
+                        name="category"
+                        id="category1"
+                        value="work"
+                      />
+                      <p>work</p>
+                    </label>
+
+                    <label>
+                      <input
+                        type="radio"
+                        name="category"
+                        id="category2"
+                        value="personal"
+                      />
+                      <p>Personal</p>
+                    </label>
+                  </div>
+                </div>
+              </form>
+
+              <h5>todo list</h5>
+              <ul class="list-container"></ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="animate1"></div>
+    <div class="cover"></div>
+    <div class="addanime">trash</div>
+    <!-- link js -->
+    <script src="app.js"></script>
+  </body>
+</html>
